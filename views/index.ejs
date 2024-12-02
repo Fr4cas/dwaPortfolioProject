@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <h1>This is an education app</h1>
-    <p><a href="about">About this App</a></p>
+
+    <div class="container"> 
+        <%- include('./partials/header.ejs') %>
+    </div>
+
+    <div class="main">
+        <h1 class="page__heading">This is an education app</h1>
+        <p class="page__body">This eductaion app uses node, express, ejs and my sql </p>
+    </div>
 </body>
 </html>

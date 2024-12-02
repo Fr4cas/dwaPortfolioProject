@@ -10,6 +10,7 @@ const port = 8000
 app.set('view engine', 'ejs');
 
 // Set up css
+app.use(express.static(__dirname + '/public'));
 
 // Load the Router
 const mainRoutes = require("./routes/main");
