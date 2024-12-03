@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: antiquewhite;
 }
@@ -6,6 +12,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: darkcyan;
+    padding: 20px;
 }
 
 /* Main Header */

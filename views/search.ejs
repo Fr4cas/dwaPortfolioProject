@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search the <%=appName%> </title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <%- include('./partials/header.ejs') %>
         <div class="main">
             <h1 class="page__description">This is the search page</h1>
-            <p class="page__body">The database will be searchable in the future</p>
+            <p class="page__body">Search the <%=appName%> for words</p>
             <form action="/search_result" method="GET">
                 Word: <input id="search_box" type="text" name="search_text">
                 <input type="submit" value="OK" >

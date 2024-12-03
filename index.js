@@ -12,6 +12,23 @@ app.set('view engine', 'ejs');
 // Set up css
 app.use(express.static(__dirname + '/public'));
 
+// Define the database connection
+const db = mysql.createConnection ({
+    host: 'localhost',
+    user: 'vocabulary_app_user',
+    password: 'qwertyuiop',
+    database: 'vocabulary_app'
+});
+
+// Connect to the database
+db.connect((err) => {
+    if (err) {
+        throw err;
+    }
+    console.log('Connected to database');
+});
+global.db = db;
+
 // Load the Router
 const mainRoutes = require("./routes/main");
 app.use('/', mainRoutes);
