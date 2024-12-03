@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz yourself on the <%=appName%> </title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container"> 
+        <%- include('./partials/header.ejs') %>
+        <div id="learn" class="justify-center flex-column">
+            <h1 class="page__heading">This is quiz page for <%=appName%> </h1>
+        </div>
+    </div>
+    <div class="quiz">
+        <h1>Simple Quiz</h1>
+        <div class="quiz__game">
+            <h2 id="question"> Question will be here </h2>
+            <div id="answer__buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next__button">Next</button>
+        </div>
+        <script src="quiz.js"></script>
+    </div>
+</body>
+</html>

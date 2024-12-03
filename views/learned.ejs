@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words you've learned from the <%=appName%> </title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+    <div class="container"> 
+        <%- include('./partials/header.ejs') %>
+    </div>
+
+    <div class="main">
+        <h1 class="page__heading">Here are the past words you've learned using <%=appName%> </h1>
+        <ul class="list">
+            <% for(let i = 0; i < learnedWords.length; i++) { %>
+                <li><%= learnedWords[i].word %> </li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>
