@@ -12,13 +12,15 @@
         <%- include('./partials/header.ejs') %>
     </div>
 
-    <div class="main">
-        <h1 class="page__heading">Here are the past words you've learned using <%=appName%> </h1>
-        <ul class="list">
-            <% for(let i = 0; i < learnedWords.length; i++) { %>
-                <li><%= learnedWords[i].word %> </li>
-            <% } %>
-        </ul>
+    <div class="container">
+        <div class="main">
+            <h1 class="page__heading">Here are the words you've added to the <%=appName%> </h1>
+            <ul class="list">
+                <% for(let i = 0; i < learnedWords.length; i++) { %>
+                    <li><%= learnedWords[i].word %> </li>
+                <% } %>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
