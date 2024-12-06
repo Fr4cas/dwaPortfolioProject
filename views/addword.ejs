@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add words to your <%= appName %></title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container"> 
+        <%- include('./partials/header.ejs') %>
+        <div class="main">
+            <h1 class="page__description">This is where you can add more words to your <%= appName %></h1>
+        </div>
+        <form method="POST" action="/wordadded">
+            <p>Word: (please capitalize the first letter)
+                <input id="word" type="text" name="word" required>
+            </p>
+            <p>Meaning:
+                <input id="meaning" type="text" name="meaning" required>
+            </p>
+            <p>Example Sentence:
+                <input id="example" type="text" name="example" required>
+            </p>
+            <p>Difficulty level: (beginner, intermediate, pro)
+                <input id="difficulty" type="text" name="difficulty" required>
+            </p>
+            <p>Category (verb, noun, adj):
+                <input id="category" type="text" name="category" required>
+            </p>
+            <input class="submit" type="submit" value="Add Word" />
+        </form>
+    </div>
+</body>
+</html>

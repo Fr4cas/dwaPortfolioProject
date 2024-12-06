@@ -9,6 +9,9 @@ const port = 8000
 // Templating Engine
 app.set('view engine', 'ejs');
 
+// Middleware to parse form data (for req.body)
+app.use(express.urlencoded({ extended: true }));
+
 // Set up css
 app.use(express.static(__dirname + '/public'));
 
