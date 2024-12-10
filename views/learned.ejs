@@ -17,7 +17,7 @@
             <h1 class="page__heading">Here are the words you've added to the <%=appName%> </h1>
             <ul class="list">
                 <% for(let i = 0; i < learnedWords.length; i++) { %>
-                    <li><%= learnedWords[i].word %> </li>
+                    <li><%= learnedWords[i].word %>: <%= learnedWords[i].meaning %></li>
                 <% } %>
             </ul>
         </div>
