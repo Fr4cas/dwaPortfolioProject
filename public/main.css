@@ -27,6 +27,13 @@ h1 {
     padding: 20px;
 }
 
+.page__body {
+    color: #fff;
+    max-width: 80%;
+    font-size: 16px;
+    padding: 10px;
+}
+
 /* Main Header */
 .header {
     background-color: #3863a8;
