@@ -33,8 +33,16 @@ router.get('/search', function(req, res) {
 })
 
 router.get('/search_result', function (req, res) {
-     // TODO: search in the database
-    res.send(req.query);
+    let sqlquery = "SELECT * FROM words WHERE word LIKE '%" + req.query.search_text + "%'"
+    // execute sql query
+    db.query(sqlquery, (err, result) => {
+        if (err) {
+            res.redirect('./');
+        }
+        let newData = Object.assign({}, appData, {learnedWords:result});
+        console.log(newData)
+        res.render("learned.ejs", newData)
+    });
 });
 
 // Add words page
