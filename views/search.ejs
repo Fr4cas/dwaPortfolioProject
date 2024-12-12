@@ -11,7 +11,8 @@
         <%- include('./partials/header.ejs') %>
         <div class="main">
             <h1 class="page__description">This is the search page</h1>
-            <p class="page__body">Search the <%=appName%> for words</p>
+
+            <p class="page__body">You can test the search using Hello, words that you enter afterwards will be searchable in a similar fashion.</p>
             <form action="/search_result" method="GET">
                 Word: <input id="search_box" type="text" name="search_text">
                 <input type="submit" value="OK" >
