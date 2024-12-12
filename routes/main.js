@@ -15,7 +15,7 @@ res.render('about.ejs', appData)
 })
 
 router.get('/learned', function(req, res) {
-    let sqlquery = "SELECT * FROM words"; // query database to get all the books
+    let sqlquery = "SELECT * FROM words;"; // query database to get all the books
     // execute sql query
     db.query(sqlquery, (err, result) => {
     if (err) {
